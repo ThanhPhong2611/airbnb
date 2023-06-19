@@ -1,4 +1,4 @@
-export const ServerAPI = "https://airbnb-api-blush.vercel.app";
+export const ServerAPI = "https://airbnb-api-eu6j.onrender.com";
 
 export const ListAPI = {
     "REGISTER" : "api/v1/register",
