@@ -47,7 +47,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
     });
   };
   const onRent = useCallback(() => {
-    if (!currentUser) {
+    if (!currentUser || !currentUser?.name) {
       return loginModal.onOpen();
     }
 
@@ -114,7 +114,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
           "
         >
           <div className="flex flex-col cursor-pointer">
-            {currentUser ? (
+            {currentUser && currentUser.name && currentUser.name !== '' ? (
               <>
                 <MenuItem 
                   label={currentUser.name}
